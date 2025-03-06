@@ -1,0 +1,20 @@
+{
+    "name": "string-calculator",
+    "version": "1.0.0",
+    "description": "coding challenge by Incubyte",
+    "main": "StringCalculator.js",
+    "repository": "https://github.com/narayanan-cs/string-calculator.git",
+    "author": "Narayanan <narayanan.cs.38@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "jest": "^29.7.0",
+        "typescript": "^5.8.2"
+    },
+    "scripts": {
+        "build": ".\\node_modules\\.bin\\tsc StringCalculator.ts",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.14"
+    }
+}
