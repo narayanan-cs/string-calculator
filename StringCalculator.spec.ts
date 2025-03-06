@@ -30,6 +30,12 @@ test("calculator should return sum of an unknown number of numbers correctly",()
     expect(calculator.add('1,2,3,4,5')).toEqual(15)
     })
 
+    test("calculator should handle new lines between numbers correctly",()=>{
+        expect(calculator.add('1\n2,3')).toEqual(6)
+        expect(calculator.add('"",1\n2')).toEqual(3)
+        expect(calculator.add('1,2\n3\n4,5')).toEqual(15)
+        })
+    
 afterAll(()=>{
     
 })
