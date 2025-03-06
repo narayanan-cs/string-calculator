@@ -1,7 +1,13 @@
 export class StringCalculator {
   
     add(numbers: string): number {
-      return 0
+      let sum = 0
+      const splitNumbers = numbers.split(",")   
+      for(let i=0;i<splitNumbers.length;i++)
+      {
+        sum += parseInt(splitNumbers[i]) || 0
+      }
+        return sum
     }
   }
   
