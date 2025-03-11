@@ -40,7 +40,13 @@ test("calculator should return sum of an unknown number of numbers correctly",()
     expect(calculator.add("//;\n1;2")).toEqual(3)
     expect(calculator.add("//%\n1%2%3%4%5")).toEqual(15)
     expect(calculator.add("//\x02\n1\x022\x023\x024\x025")).toEqual(15)
-  })      
+  }) 
+  
+  test("Negatives not allowed", ()=>{
+    expect(()=>calculator.add('-1,""')).toThrow("Negatives not allowed! -1")
+    expect(()=>calculator.add('1,"",-2,4,5,-3')).toThrow("Negatives not allowed! -2,-3")
+
+  })
 afterAll(()=>{
     
 })
